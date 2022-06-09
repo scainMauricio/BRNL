@@ -4,7 +4,7 @@ var { Product } = require("./Models/product.model");
 //TODO if I have time, create controlers for the callbacks for each route
 
 //GET ALL PRODUCTS
-router.get("/products", async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     let allProducts = await Product.find();
     res.status(200);

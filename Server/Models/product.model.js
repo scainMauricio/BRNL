@@ -12,6 +12,6 @@ const productSchema = new mongoose.Schema({
   photos: { type: String }, //TODO  array image?
 });
 
-const Product = mongoose.model("events", productSchema);
+const Product = mongoose.model("products", productSchema);
 
 module.exports = { Product };
