@@ -6,13 +6,15 @@ import { Route, Routes, BrowserRouter } from "react-router-dom";
 import Category from "./Pages/Category";
 import Home from "./Pages/Home";
 import { SearchContextProvider } from "./Contexts/searchContext";
-import Searched from "./Pages/Searched";
+import ProductDetails from "./Pages/ProductDetails";
+import Advertise from "./Pages/Advertise";
 
 function App() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
     getAll().then((data) => {
+      console.log(data, "data");
       setProducts(data);
     });
   }, []);
@@ -26,13 +28,14 @@ function App() {
           <Routes>
             <Route path="/" element={<Home products={products}></Home>}></Route>
             <Route
+              path="/brand/:_id"
+              element={<ProductDetails products={products}></ProductDetails>}
+            ></Route>
+            <Route
               path="/category/:cat"
               element={<Category products={products}></Category>}
             ></Route>
-            {/* <Route
-              path="/searched/:search"
-              element={<Searched products={products}></Searched>}
-            ></Route> */}
+            <Route path="/advertise" element={<Advertise></Advertise>}></Route>
           </Routes>
         </BrowserRouter>
       </SearchContextProvider>

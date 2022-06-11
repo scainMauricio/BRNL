@@ -7,19 +7,29 @@ import { searchContext } from "../Contexts/searchContext";
 export default function ProductsList({ products }) {
   const { searchTerm, setSearchTerm } = useContext(searchContext);
 
-  // {movies
-  //   .filter((movie) => {
-  //     if (searchTerm == "") {
-  //       return movie;
-  //     } else if (
-  //       movie.title.toLowerCase().includes(searchTerm.toLowerCase())
-  //     ) {
-  //       return movie;
-  //     }
-  //   })
-  //   .map((movie) => {
-  //     return movie.vote_average >= status ? compo(movie) : "";
-  //   })}
+  //search function
+
+  let filtered = products.filter((product) => {
+    if (
+      searchTerm === "" ||
+      product.description.toLowerCase().includes(searchTerm.toLowerCase())
+    ) {
+      return product;
+    }
+  });
+
+  //no results
+
+  if (!filtered.length)
+    return (
+      <div className="noResultsHome">
+        <span className="noResultSpan">
+          No Results Found for "{searchTerm}"{" "}
+        </span>
+      </div>
+    );
+
+  //return
 
   return (
     <>
@@ -35,32 +45,13 @@ export default function ProductsList({ products }) {
             },
           }}
         >
-          {products
-            .filter((product) => {
-              if (searchTerm === "") {
-                return product;
-              } else if (
-                product.description
-                  .toLowerCase()
-                  .includes(searchTerm.toLowerCase())
-              ) {
-                return product;
-              }
-            })
-            .map((product) => {
-              return (
-                <SplideSlide>
-                  <SingleProduct product={product}></SingleProduct>
-                </SplideSlide>
-              );
-            })}
-          {/* {products.map((product) => {
+          {filtered.map((product) => {
             return (
               <SplideSlide>
                 <SingleProduct product={product}></SingleProduct>
               </SplideSlide>
             );
-          })} */}
+          })}
         </Splide>
       </section>
     </>

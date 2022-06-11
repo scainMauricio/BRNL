@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans&family=Quantico&family=Roboto&display=swap');
+
 body{
   margin: 0;
   padding: 0;
@@ -6,52 +8,78 @@ body{
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+	font-family: 'Josefin Sans', sans-serif;
+	position: relative;
 
 }
 
 a{
 	text-decoration: none;
 	color: black;
+	display: flex;
+	align-items: center;
+
 }
 
 
 .navContainer{
-	min-height: 200px;
+
 	display: flex;
-	flex-direction: column;
+	padding-bottom: 20px;
 	flex-wrap:wrap;
 	margin: 0;
 	align-items:center;
-	justify-content: space-evenly;
-
+	justify-content: space-around;
+	background-color: rgb(255, 255, 255);
+	border-bottom-left-radius: 10%;
+	border-bottom-right-radius: 10%;
 
 }
 
-.logoContainer{
-	margin: 15px;
+
+.advertiseContain{
+
+ text-align: end;
+	background-color: transparent;
+	background-color: transparent;
+ padding: 8px;
+ border-radius: 5px;
+ box-shadow: 04px 4px 12px rgb(0 0 0 / 42%);
+ border: solid 2px rgba(128, 128, 128, 0.331);
+ font-family: 'Quantico', sans-serif;
+
+}
+
+.advertiseContain:hover{
+	background-color: #9b989830;
+	cursor:pointer;
 }
 
 .logo{
-width: 400px;
+width: 330px;
 height: auto;
 border: none;
 
 }
 
 .searchContainer{
-  width: 38%;
-		
+	min-width: 300px;
+	width: 33%;
+	
 }
+
 
 .searchInput{
 	background-color: rgba(255, 255, 255, 0.53);
-	box-shadow: 04px 4px 12px rgb(0 0 0 / 42%);
-  width: 100%;
+
+  width: 90%;
   border-radius: 18px;
+	box-shadow: 04px 4px 12px rgb(0 0 0 / 42%);
 	border: solid 2px rgba(128, 128, 128, 0.331);
   text-align: center;
   padding: 15px 10px;
   font-weight: 550;
+	font-family: 'Josefin Sans', sans-serif;
 }
 
 
@@ -82,12 +110,67 @@ border: none;
 .h1div{
 	margin: 50px auto;
 	padding: 0 10px;
-	font-size: 4rem;
+	font-size: 3rem;
 	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	position: relative;
+
+}
+/* 
+.word{
+	display: inline-block;
+
 }
 
+.word span{
+	position: absolute;
+	top: 0;
+	overflow: hidden;
+	animation: animate 10s linear infinite;
+	opacity: 0;
 
+}
+@keyframes animate {
+	0% {
+		opacity: 0;
+		transform: translateY(-50px);
+	}
+	2% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+	18% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+	20% {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+	100% {
+		opacity: 0;
+		transform: translateY(-50px);
+	}
+}
+.word span:nth-child(1){
+	animation-delay: 0s;
+}
 
+.word span:nth-child(2){
+	animation-delay: 2s;
+}
+.word span:nth-child(3){
+	animation-delay: 4s;
+}
+.word span:nth-child(4){
+	animation-delay: 6s;
+}
+.word span:nth-child(5){
+	animation-delay: 8s;
+}
+.word span:nth-child(6){
+	animation-delay: 10s;
+} */
 /* Category Section */
 
 .categorySection{
@@ -101,25 +184,31 @@ border: none;
 	margin: 0 auto;
 	align-items: center;
 	box-shadow: 0 4px 12px rgb(0 0 0 / 12%);
+	margin-bottom: 2rem;
 }
 
 .categoryBox {
 	border-radius: 50%;
 	margin: 20px;
-	background-color: #007dc1;
+	background-color: rgba(97, 99, 97, 0.135);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	width: 130px;
 	height: 130px;
-	box-shadow: 0 2px 17px 0 #007dc1;
+	box-shadow: 0 2px 17px 0 #181717;
 	transition: transform .5s;
 	padding: 10px;
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(60%);
+
 }
 
 .categoryBox:hover{
 	transform: scale(1.1);
+	filter: none;
+	-webkit-filter: grayscale(0%);
 }
 
 .categoryIcon{
@@ -128,20 +217,15 @@ border: none;
 
 .categoryImg {
 	width: 100%;
-	filter: grayscale(100%);
-	-webkit-filter: grayscale(100%);
+
 }
 
-.categoryImg:hover {
-	filter: none;
-	-webkit-filter: grayscale(0%);
-}
 
 .categoryName{
 	text-align: center;
 	font-size: 1.3rem;
 	font-weight: 600;
-	color: white;
+
 	margin-top: 10px;
 
 }
@@ -155,7 +239,7 @@ border: none;
 	box-shadow: 0 15px 30px 1px grey;
 	text-align: center;
 	border-radius: 5px;
-	margin: 5em auto;
+	margin: 1em auto;
 	height: 300px;
 	width: 90%;
 	
@@ -209,10 +293,26 @@ border: none;
 
 ul {
 	list-style-type: none;
+
+
 }
 
-li{
-	margin: 2px;
+
+
+.brandDescription ul {
+	list-style-type:none;
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	justify-content: space-around;
+
+
+}
+
+.brandDescription li{
+	padding: 3px;
+	margin: 3px;
+	background-color: #9b989830;
 }
 
 
@@ -245,6 +345,14 @@ li{
 .singleCardCity{
 	margin-bottom: 10px;
 }
+
+.byCategoryContainer{
+	border: 1em solid rgba(128, 128, 128, 0.445);
+	box-shadow: 0 15px 30px 1px grey;
+	width: 95%;
+	margin: auto;
+	padding: 20px ;
+}
 	
 	.singleProductContainer{
 		display: flex;
@@ -268,7 +376,7 @@ li{
 		justify-content: center;
 		margin: 20px;
 		width: 300px;
-		height: 500px;
+		height: 400px;
 		box-shadow: 0 15px 30px 1px grey;
 		overflow: hidden;
 			
@@ -293,11 +401,32 @@ li{
 
 	.singleCardDescription {
 		height: 50%;
-		padding: 15px;
 		display: flex;
 		flex-wrap:wrap;
-		justify-content: center;
+		align-items: flex-start;
+		overflow:scroll;
+
+	}
+
+	.singleCardDescription::-webkit-scrollbar {
+		display: none;
+	}
+
+	.singleCardDescription ul{
+		list-style-type:none;
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		justify-content: stretch;
+		overflow:hidden;
+
+	}
 	
+	.singleCardDescription li{
+		padding: 3px;
+		margin: 3px;
+		background-color: #9b989830;
+
 	}
 
 
@@ -320,7 +449,7 @@ li{
 	.titleContainer {
 		font-size: 4rem;
 		display: flex;
-		margin: 3rem 2rem;
+		margin: 1rem 2rem;
 		border-top: 2px solid rgba(128, 128, 128, 0.445);;
 		padding: 5px 0;
 
@@ -338,6 +467,7 @@ li{
 	.backNav{
 		width: 20%;
 		text-decoration: none;
+
 	}
 
 	.backBtn{
@@ -353,7 +483,219 @@ li{
 		margin-right: 10px;
 	}
 
-	.singleCardInfo a:hover{
-	transform: scale(1.3);
+
+	
+
+
+
+/* 
+	########################  PRODUCT DETAILS ##########
+
+ */
+
+	.brandContainer {
+		display: flex;
+		flex-wrap: wrap;
+		margin: auto;
+		justify-content:center;
+		align-items: center;
+		padding: 20px 0;
+		border: 1em solid rgba(128, 128, 128, 0.445);
+		box-shadow: 0 15px 30px 1px grey;
+		overflow: hidden;
+		width: 80%;
+	
+	}
+
+	.brandLogo{
+		width: 420px;
+		height: 400px;
+	 	object-fit:contain;
+
+	}
+
+	.brandInfo{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 10px;
+		width: 40%;
+	}
+
+	.brandPhone, .brandWebsite, .brandCity, .brandDescription{
+		
+		padding: 10px 10px;
+		font-size: 1rem;
+		border-top: 1px solid rgba(128, 128, 128, 0.445);
+		width: 80%;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+
+		
+	}
+
+
+
+	.brandName{
+		width: 100%;
+		font-size: 2rem;
+		font-weight: 600;
+		text-align: center;
+	}
+
+.secondaryTitle{
+	margin: 3rem 15px 0;
+	font-size: 3rem;
+}
+
+
+
+.noResults{
+	display: flex;
+	justify-content: center;
+	margin: 30px 0 0 0;
+
+}
+
+.noResultSpan{
+	font-size: 3rem;
+	color: rgba(128, 128, 128, 0.68);
+}
+
+.noResultsHome{
+	display: flex;
+	justify-content: center;
+	align-items: center	;
+	margin: 30px 0 0 0;
+	height: 400px;
+}
+
+/* 
+<section className="brandContainer">
+<form className="advertiseForm">
+	<div className="advertiseTitle">Texto aqui</div>
+	<div className="advertiseSubtitle">
+		este form enviara seu produto para analise para ser adicionado ao
+		site
+	</div>
+
+	<label className="">Name</label>
+	<input type="text" name="nameIpt" className="nameIpt"></input>
+	<label className="">Phone</label>
+	<input type="text" name="phoneIpt" className="phoneIpt"></input>
+	<label className="">City</label>
+	<input type="text" name="cityIpt" className="cityIpt"></input>
+	<label className="">Website</label>
+	<input type="text" name="websiteIpt" className="websiteIpt"></input>
+	<label className="">Category</label>
+	<input type="file" name="categoryIpt" className="categoryIpt"></input>
+	<label className="">Description</label>
+	<input
+		type="text"
+		name="descriptionIpt"
+		className="descriptionIpt"
+	></input>
+	<label className="">Logo</label>
+	<input type="text" name="logoIpt" className="logoIpt"></input> */
+
+	.noResultsCategory{
+		height: 333px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.advertiseForm{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+	}
+
+	.advertiseTitle{
+		font-size: 2rem;
 	}
 	
+	.advertiseForm div{
+		margin: 15px 0;
+		display: flex;
+		flex-direction: column;
+
+	}
+
+	.custom-file-input {
+		background-color: transparent!important;
+		border: none!important;
+		font-weight: 500!important;
+		font-family: 'Josefin Sans', sans-serif;
+	}
+
+	.advertiseForm input{
+		margin-bottom: 10px;
+		padding: 5px;
+		width: 90%;
+		border: solid 0.5px gray;
+		border-radius: 8px;
+		background-color: rgba(255, 255, 255, 0.532);
+		font-weight: 600;
+	}
+
+
+
+
+
+	.custom-file-input::-webkit-file-upload-button {
+		visibility: hidden;
+	}
+
+
+
+	.custom-file-input::before {
+
+		content: 'Upload your logo';
+		display: inline;
+		color: black;
+		background: -webkit-linear-gradient(top, #f9f9f9be, #e3e3e3);
+		border: 0.5px solid #999;
+		border-radius: 3px;
+		padding: 5px 8px;
+		outline: none;
+		white-space: nowrap;
+		cursor: pointer;
+		text-shadow: 1px 1px #fff;
+		font-weight: 700;
+		font-size: 10pt;
+	}
+
+	.custom-file-input:active {
+		outline: 0;
+	}
+
+
+
+	.formSubmitContainer{
+		display: flex;
+		flex-direction: row!important;
+		justify-content:flex-start!important;
+		align-items: center!important;
+	}
+	
+	.formBtn{
+		font-family: 'Josefin Sans', sans-serif;
+		padding: 8px 0!important;
+		width: 50%;
+		margin: 15px 0;
+		border-radius: 5;
+		color: black;
+		background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+		border: 1px solid #999;
+		border-radius: 3px;
+		padding: 5px 8px;
+		outline: none;
+		white-space: nowrap;
+		cursor: pointer;
+		text-shadow: 1px 1px #fff;
+		font-weight: 700;
+		font-size: 10pt;
+	}

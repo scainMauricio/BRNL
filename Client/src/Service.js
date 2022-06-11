@@ -31,9 +31,9 @@ export const postOne = async (product) => {
 
 //by id
 
-const getCategoriesById = async (id) => {
+export const getById = async (id) => {
   try {
-    const res = await fetch(`http://localhost:3001/${id}`);
+    const res = await fetch(`http://localhost:3001/brand/${id}`);
     return await res.json();
   } catch (error) {
     console.log(error);
