@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const baseURL = "http://localhost:3000/";
 
-export default function SingleCategory({ category }) {
+export default function SingleCategoryIcon({ category }) {
   return (
     <>
       <NavLink

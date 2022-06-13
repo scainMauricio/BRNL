@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 export default function SingleProductByCategory({ product }) {
   const filterDescription = product.description.split(",").slice(0, 3);
 
+  //TODO refactor it to reuse singleProductCard
   return (
     <>
       <NavLink className="" to={"/brand/" + product._id}>

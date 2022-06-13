@@ -1,3 +1,5 @@
+//since its a static data, i decided to leave here instead of in the Database
+
 const categories = [
   {
     name: "Food",

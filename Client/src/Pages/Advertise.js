@@ -5,7 +5,7 @@ import emailjs from "@emailjs/browser";
 
 export default function Advertise() {
   const [selectedImage, setSelectedImage] = useState("");
-  const [isVisible, setIsVisivle] = useState({ display: "none" });
+  const [isVisible, setIsVisible] = useState({ display: "none" });
   const former = useRef();
 
   const uploadImg = async (event) => {
@@ -32,6 +32,7 @@ export default function Advertise() {
       extFile == "png" ||
       extFile == "GIF"
     ) {
+      //uploading img to cloudnary
       const formImage = new FormData();
       formImage.append("file", selectedImage);
       formImage.append("upload_preset", "xj1s3axx");
@@ -39,7 +40,7 @@ export default function Advertise() {
         "https://api.cloudinary.com/v1_1/brnl/upload",
         formImage
       );
-
+      //sending data to email
       await emailjs.sendForm(
         "service_ix9eexg",
         "template_gwv9ceo",
@@ -47,7 +48,8 @@ export default function Advertise() {
         "vBO4JOP98AyU4tbbe"
       );
 
-      setIsVisivle({ display: "block" });
+      //hidden span to display when the form info is sent
+      setIsVisible({ display: "block" });
       event.target.reset();
     } else {
       alert("Only image files are allowed!"); //could display anotehr message instead of alert

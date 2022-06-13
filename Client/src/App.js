@@ -19,6 +19,8 @@ function App() {
     });
   }, []);
 
+  //refactor routers to a new file (?)
+
   return (
     <>
       <SearchContextProvider>

@@ -1,3 +1,5 @@
+//since its a static data, i decided to leave here instead of in the Database
+
 const categoriesLogos = {
   Food: "https://res.cloudinary.com/brnl/image/upload/v1654692784/brnl/food_nlvqti.png",
   Health:

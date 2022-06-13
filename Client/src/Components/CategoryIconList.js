@@ -1,13 +1,13 @@
 import React from "react";
-import SingleCategory from "./SingleCategory";
+import SingleCategoryIcon from "./SingleCategoryIcon";
 import categories from "../Utils/CategoriesData";
 
-export default function CategoryList() {
+export default function CategoryIconList() {
   return (
     <>
       <section className="categorySection">
         {categories.map((category) => {
-          return <SingleCategory category={category}></SingleCategory>;
+          return <SingleCategoryIcon category={category}></SingleCategoryIcon>;
         })}
       </section>
     </>

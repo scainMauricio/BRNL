@@ -1,11 +1,11 @@
-import React, { useEffect, useState, useContext } from "react";
-import SingleProduct from "./SingleProduct";
+import React, { useContext } from "react";
+import SingleProductCard from "./SingleProductCard";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import { searchContext } from "../Contexts/searchContext";
 
-export default function ProductsList({ products }) {
-  const { searchTerm, setSearchTerm } = useContext(searchContext);
+export default function AllProductsList({ products }) {
+  const { searchTerm } = useContext(searchContext);
 
   //search function
 
@@ -48,7 +48,7 @@ export default function ProductsList({ products }) {
           {filtered.map((product) => {
             return (
               <SplideSlide>
-                <SingleProduct product={product}></SingleProduct>
+                <SingleProductCard product={product}></SingleProductCard>
               </SplideSlide>
             );
           })}

@@ -1,13 +1,13 @@
-import React, { useEffect, useState, useContext } from "react";
-import SingleProduct from "./SingleProduct";
+import React, { useContext } from "react";
+import SingleProductCard from "./SingleProductCard";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import { searchContext } from "../Contexts/searchContext";
 
-export default function ProductByCategory({ products, cat, _id }) {
-  const { searchTerm, setSearchTerm } = useContext(searchContext);
+export default function SingleProductDetails({ products, cat, _id }) {
+  const { searchTerm } = useContext(searchContext);
 
-  //search +  return no results found. Should refactor.
+  //search +  return no results found. Should refactor in a better way.
   let filtered = products.filter((product) => {
     if (
       searchTerm === "" ||
@@ -51,7 +51,7 @@ export default function ProductByCategory({ products, cat, _id }) {
             .map((product) => {
               return (
                 <SplideSlide>
-                  <SingleProduct product={product}></SingleProduct>
+                  <SingleProductCard product={product}></SingleProductCard>
                 </SplideSlide>
               );
             })}

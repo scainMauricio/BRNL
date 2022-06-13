@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 import categoriesLogos from "../Utils/CategoriesLogo";
 import { searchContext } from "../Contexts/searchContext";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import SingleProduct from "../Components/SingleProduct";
+import SingleProductCard from "../Components/SingleProductCard";
 
 export default function Food({ products }) {
   const { searchTerm, setSearchTerm } = useContext(searchContext);
@@ -90,7 +90,7 @@ export default function Food({ products }) {
           {filteredBySearch.map((product) => {
             return (
               <SplideSlide>
-                <SingleProduct product={product}></SingleProduct>
+                <SingleProductCard product={product}></SingleProductCard>
               </SplideSlide>
             );
           })}

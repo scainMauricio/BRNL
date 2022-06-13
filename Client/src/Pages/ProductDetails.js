@@ -1,14 +1,9 @@
 import { NavLink } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import ProductByCategory from "../Components/ProductByCategory";
+import SingleProductDetails from "../Components/SingleProductDetails";
 
 export default function ProductDetails({ products }) {
   let { _id } = useParams();
-
-  // const mapHref = "https://www.google.com/maps/place/" + product.city;
-  // const phoneHref = "tel:" + product.phone;
-
-  //fetch + useeffect would work better
 
   let product = products.filter((item) => {
     return item._id === _id;
@@ -80,11 +75,11 @@ export default function ProductDetails({ products }) {
           </section>
           <section className="SimilarContainer">
             <div class="secondaryTitle">Similar Options:</div>
-            <ProductByCategory
+            <SingleProductDetails
               products={products}
               cat={product[0].category}
               _id={product[0]._id}
-            ></ProductByCategory>
+            ></SingleProductDetails>
           </section>
         </>
       ) : (
