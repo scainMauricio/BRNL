@@ -6,6 +6,7 @@
 
 BR-NL is a website that lists services provided by Brazilians living in the Netherlands.
 The idea for this site came about because Brazilians who live abroad usually look for other Brazilians when they need a specific service or when they miss Brazilian food.
+This webapp was my first experience with React.
 
 ## Tech Stack
 
@@ -16,6 +17,14 @@ Express
 React
 
 NodeJs
+
+
+
+<img src="https://res.cloudinary.com/brnl/image/upload/v1657618487/brnl/brnl_lqufc1.png"></img>
+
+<img src="https://res.cloudinary.com/brnl/image/upload/v1657618488/brnl/brnl2_niltdw.png"></img>
+
+
 
 ## Getting Start
 
