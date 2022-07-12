@@ -10,23 +10,14 @@ This webapp was my first experience with React.
 
 ## Tech Stack
 
-MongoDB - Mongoose
-
-Express
-
-React
-
-NodeJs
-
+### MongoDB - Mongoose
+### Express
+### React
+### NodeJs
 
 
 <img src="https://res.cloudinary.com/brnl/image/upload/v1657618487/brnl/brnl_lqufc1.png"></img>
-
-
-
-<img src="https://res.cloudinary.com/brnl/image/upload/v1657618488/brnl/brnl2_niltdw.png"></img>
-
-
+<img src="https://res.cloudinary.com/brnl/image/upload/v1657618742/brnl/brnl2_l63p0t.jpg"></img>
 
 ## Getting Start
 
